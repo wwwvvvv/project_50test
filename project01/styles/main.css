@@ -1,0 +1,51 @@
+body {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+}
+
+.panel-list{
+    width:90vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 20px auto 0;
+    padding: 0;
+}
+
+.panel-item {
+    background: url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2F4k%2Fs%2F02%2F2109242306111155-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1659509150&t=6c8efedf3c89aeee4fefeb7ad1d1124f") no-repeat center;
+    background-size: cover;
+    flex: 1;
+    height: 100%;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 700ms linear;
+}
+
+.panel-item.active{
+    flex: 10;
+}
+
+.panel-item:last-child {
+    margin-right: 0;
+}
+
+.panel-item h3{
+    color: red;
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 300ms linear 400ms;
+}
+
+.panel-item.active h3{
+    opacity: 1;
+}
